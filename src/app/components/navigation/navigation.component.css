@@ -1,0 +1,29 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75vw;
+  padding: 10px;
+
+  border: 1px solid black;
+
+  .nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    padding: 30px;
+    background-color: cadetblue;
+    border: 1px solid black;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-container {
+    width: 100vw;
+  }
+  .nav-button {
+    display: none;
+  }
+}
