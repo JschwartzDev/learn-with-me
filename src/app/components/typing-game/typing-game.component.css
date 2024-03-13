@@ -9,7 +9,11 @@
   border: 1px solid black;
 
   .greetings-div {
-    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+    padding: 20px;
 
     border: 1px solid black;
   }
@@ -36,6 +40,14 @@
   background-color: indianred;
 }
 
+.word-nav-btn:hover {
+  cursor: pointer;
+}
+
+.word-nav-btn:active {
+  background-color: hsl(0, 54%, 69%);
+}
+
 .game {
   display: flex;
   flex-direction: column;
@@ -51,6 +63,13 @@
     margin-bottom: 1rem;
   }
 
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+  }
+
   .game-input {
     width: 75%;
     height: 3rem;
@@ -63,6 +82,7 @@
   .wrapper {
     .greetings-div {
       margin: 0px 0px;
+      width: 100%;
     }
   }
   .game-wrapper {

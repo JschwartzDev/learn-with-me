@@ -4,12 +4,23 @@
     <h1>Welcome to the typing game, (your name)</h1>
   </div>
   <div class="game-wrapper">
-    <div class="word-nav-btn">Previous</div>
+    <button class="word-nav-btn" (click)="this.previous()">Previous</button>
     <div class="game">
-      <h1 id="word" class="word">something</h1>
+      <div class="stats">
+        <span>Correct: {{ this.numCorrect }}</span
+        ><span>Skipped: {{ this.numSkipped }}</span>
+      </div>
+      <h1 id="word" class="word">{{ this.current }}</h1>
 
-      <input type="text" id="input" class="game-input" />
+      <input
+        type="text"
+        id="input"
+        class="game-input"
+        (keyup)="this.onKeyUp($event)"
+        [(ngModel)]="this.inputValue"
+        autocomplete="off"
+      />
     </div>
-    <div class="word-nav-btn">Next</div>
+    <button class="word-nav-btn" (click)="this.next()">Next</button>
   </div>
 </div>
